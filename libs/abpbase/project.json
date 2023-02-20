@@ -1,0 +1,27 @@
+{
+  "name": "abpbase",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/abpbase/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "dependsOn": [{ "target": "build", "projects": "dependencies" }],
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/abpbase",
+        "main": "libs/abpbase/src/index.ts",
+        "tsConfig": "libs/abpbase/tsconfig.lib.json",
+        "assets": ["libs/abpbase/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/abpbase/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

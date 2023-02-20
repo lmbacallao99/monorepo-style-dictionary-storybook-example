@@ -1,0 +1,43 @@
+{
+  "name": "tokens",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/tokens/src",
+  "projectType": "library",
+  "targets": {
+    "tokens:build": {
+      "executor": "@nxkit/style-dictionary:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "libs/tokens/src/build",
+        "styleDictionaryConfig": "libs/tokens/style-dictionary.config.ts",
+        "tsConfig": "libs/tokens/tsconfig.json"
+      }
+    },
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "dependsOn": ["tokens:build"],
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/tokens",
+        "main": "libs/tokens/src/index.ts",
+        "tsConfig": "libs/tokens/tsconfig.lib.json",
+        "assets": ["libs/tokens/*.md"]
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs tokens {args.ver} {args.tag}"
+      },
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/tokens/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

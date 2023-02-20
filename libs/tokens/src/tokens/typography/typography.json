@@ -1,0 +1,39 @@
+{
+  "typography": {
+    "fontSize": { "value": "16px" },
+    "fontWeight": {
+      "ligh": { "value": "300" },
+      "regular": { "value": "400" },
+      "medium": { "value": "500" },
+      "bold": { "value": "700" }
+    },
+    "h1": {
+      "fontSize": { "value": "40px" },
+      "fontWeight": { "value": "{typography.fontWeight.bold.value}" }
+    },
+    "h2": {
+      "fontSize": { "value": "32px" },
+      "fontWeight": { "value": "{typography.fontWeight.medium.value}" }
+    },
+    "h3": {
+      "fontSize": { "value": "24px" },
+      "fontWeight": { "value": "{typography.fontWeight.regular.value}" }
+    },
+    "h4": {
+      "fontSize": { "value": "20px" },
+      "fontWeight": { "value": "{typography.fontWeight.bold.value}" }
+    },
+    "h5": {
+      "fontSize": { "value": "16px" },
+      "fontWeight": { "value": "{typography.fontWeight.regular.value}" }
+    },
+    "paragraph": {
+      "fontSize": { "value": "14px" },
+      "fontWeight": { "value": "{typography.fontWeight.regular.value}" }
+    },
+    "caption": {
+      "fontSize": { "value": "12px" },
+      "fontWeight": { "value": "{typography.fontWeight.regular.value}" }
+    }
+  }
+}

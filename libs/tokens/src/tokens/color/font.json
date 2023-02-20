@@ -1,0 +1,14 @@
+{
+  "color": {
+    "font": {
+      "agile": {
+        "black": { "value": "#1a1a1a" },
+        "dark-gray": { "value": "#464646" },
+        "light-gray": { "value": "#9d9d9d" },
+        "blue": { "value": "#02133e" },
+        "yellow": { "value": "#ffbe1e" }
+      },
+      "white": { "value": "#ffffff" }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@abp/component-base",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "dependencies": {
+    "@abp/tokens": "0.0.1"
+  }
+}
